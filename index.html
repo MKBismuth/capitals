@@ -168,9 +168,9 @@
 	var qstr = "";
 	var colonloc = ls[qnum].substring(2).search(":");
 	if (qtype == 0) {
-	  qstr = ls[qnum].substring(0,1);
+	  qstr = ls[qnum].substring(0,4);
 	}else if (qtype == 1) {
-	  qstr = ls[qnum].substring(2,colonloc);
+	  qstr = ls[qnum].substring(4,colonloc);
 	}else {
 	  qstr = ls[qnum].substring(colonloc+1);
 	}
