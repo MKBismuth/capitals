@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
   <head>
     <meta name="viewport"
       content="width=device-width" initial-scale="1.0">
@@ -166,9 +166,9 @@
         var qnum = Math.floor(Math.random() * ls.length);
         var qtype = Math.floor(Math.random() * 3);
 	var qstr = "";
-	var colonloc = ls[qnum].substring(3).search(":")+2;
+	var colonloc = ls[qnum].substring(3).search(":")+3;
 	if (qtype == 0) {
-	  qstr = ls[qnum].substring(0,4);
+	  qstr = ls[qnum].substring(0,2);
 	}else if (qtype == 1) {
 	  qstr = ls[qnum].substring(3,colonloc);
 	}else {
