@@ -163,17 +163,18 @@
 		"🇳🇿:new zealand:wellington"];
 
       function quizzz() {
-        var qnum = Math.floor(Math.random() * ls.length);
-        var qtype = Math.floor(Math.random() * 3);
-	var qstr = "";
-	var colonloc = ls[qnum].substring(3).search(":")+3;
-	if (qtype == 0) {
-	  qstr = ls[qnum].substring(0,2);
-	}else if (qtype == 1) {
-	  qstr = ls[qnum].substring(3,colonloc);
-	}else {
-	  qstr = ls[qnum].substring(colonloc+1);
-	}
+       var qnum = Math.floor(Math.random() * ls.length);
+       var qtype = Math.floor(Math.random() * 3);
+       var qstr = "";
+       var colon1loc = ls[qnum].indexof(":");
+       var colon2loc = ls[qnum].indexof(":", colon1loc + 1);
+       	if (qtype == 0) {
+       	  qstr = ls[qnum].slice(0, colon1loc);
+        } else if (qtype == 1) {
+	  qstr = ls[qnum].slice(colon1loc + 1, colon2loc);
+	} else {
+	  qstr = ls[qnum].slice(colon2loc);
+        }
         document.getElementById("qp").innerHTML = qstr;
       }
       quizzz();
