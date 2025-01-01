@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <p id="qp" align="center"></p>
+    <p id="qp" align="center">p</p>
     <button class="qbut" onclick="quizzz()" align="center">Next</button>
 
 
@@ -175,6 +175,7 @@
 	} else {
 	  qstr = ls[qnum].slice(colon2loc);
         }
+	      alert("%%%");
         document.getElementById("qp").innerHTML = qstr;
       }
       quizzz();
